@@ -136,7 +136,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link  {{request()->is('report/per_student') ? 'active': ''}}" href="report/per_student">
                                 <span data-feather="file-text" class="align-text-bottom"></span>
                                 Rekap Laporan
                             </a>

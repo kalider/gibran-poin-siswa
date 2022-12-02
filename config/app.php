@@ -183,6 +183,7 @@ return [
         App\Providers\TeacherServiceProvider::class,
         App\Providers\ClauseServiceProvider::class,
         App\Providers\PointServiceProvider::class,
+        App\Providers\PointReportServiceProvider::class
     ],
 
     /*

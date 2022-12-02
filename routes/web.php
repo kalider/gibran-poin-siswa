@@ -89,3 +89,7 @@ Route::controller(App\Http\Controllers\PointController::class)->middleware([Only
     Route::post('/point/{id}/delete', 'doDelete');
 
 });
+
+Route::controller(App\Http\Controllers\PointReportController::class)->middleware([OnlyMemberMiddleware::class])->group(function() {
+    Route::get('/report/per_student', 'perStudent');
+});
