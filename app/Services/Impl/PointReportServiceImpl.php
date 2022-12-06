@@ -23,6 +23,7 @@ class PointReportServiceImpl implements PointReportService
 
         if (!empty($filters['class_id'])) $data->where('students.class_id', '=', $filters['class_id']);
         if (!empty($filters['name'])) $data->where('students.name', 'LIKE', "%{$filters['name']}%");
+        if (!empty($filters['nis'])) $data->where('students.nis', 'LIKE', "%{$filters['nis']}%");
         
         return $data->paginate();
     }

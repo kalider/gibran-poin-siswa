@@ -24,8 +24,12 @@
                 </select>
             </div>
             <div class="col-lg-3">
+                <input type="search" class="form-control" name="nis" value="{{ request()->input('nis') }}"
+                    placeholder="Nis">
+            </div>
+            <div class="col-lg-3">
                 <input type="search" class="form-control" name="name" value="{{ request()->input('name') }}"
-                    placeholder="Filter ...">
+                    placeholder="Nama">
             </div>
             <div class="col-lg-3">
                 <button class="btn btn-primary" type="submit" id="button-addon2">Cari</button>

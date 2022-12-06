@@ -35,4 +35,13 @@ class PointReportServiceTest extends TestCase
         
         $this->assertInstanceOf(LengthAwarePaginator::class, $data);
     }
+    
+    public function testReportPointPerStudentFilterByNis()
+    {
+        $this->seed([MajorSeeder::class, ClassGroupSeeder::class, StudentSeeder::class, ClauseSeeder::class, TeacherSeeder::class, PointSeeder::class]);
+
+        $data = $this->pointReportService->pointStudentByFilter(['nis' => '10206010']);
+        
+        $this->assertSame(1, $data->total());
+    }
 }

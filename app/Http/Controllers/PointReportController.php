@@ -22,8 +22,9 @@ class PointReportController extends Controller
     {
         $classId = $request->input('class_id');
         $name = $request->input('name');
+        $nis = $request->input('nis');
 
-        $report = $this->pointReportService->pointStudentByFilter(['class_id' => $classId, 'name' => $name]);
+        $report = $this->pointReportService->pointStudentByFilter(['class_id' => $classId, 'name' => $name, 'nis' => $nis]);
         $classGroups = $this->classGroupService->findAll();
         
         return response()->view('report.per_student', [
